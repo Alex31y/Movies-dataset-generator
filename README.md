@@ -5,9 +5,12 @@ The resulting product consists of two CSV files: "movies_list.csv" and "metadata
 To run correctly, the script needs to be run in the following order:
 
 movie list.py
+
 This script generates 'movie_list.csv', the first part of the dataset which consists of genre_ids, id, original_language, overview, popularity, release_date, title, vote_average, and vote_count.
 
 rows 6-10 is where you define your API and the movies you want to retrieve, following this format: 'language':number of movies
 row 58 is where you can change the features selected for the database you are creating
+
 meta data.py
+
 This script requires as input an index of movie IDs, for example, the output of the previous script. Then, for each of those movies, it gathers the director, the top 5 most popular actors, and keywords. I implemented multithreading to speed up the code.
